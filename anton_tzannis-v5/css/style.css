@@ -1,0 +1,2059 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;&family=Playfair+Display:wght@600;&display=swap");
+/* Mobile first 
+// Tablet mediaquery: @media screen and (min-width: 672px) and (max-width: 950px) 
+// Desktop mediaqury: @media screen and (min-width: 951px) */
+/* ======================================================================= */
+/* ================================ GENERAL ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--primary-black);
+}
+
+header,
+footer {
+  max-width: 1600px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page {
+  width: 85%;
+  margin: auto;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .page {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .page {
+    width: 80%;
+  }
+}
+.primary-whitespace-horizontal {
+  height: 30px;
+}
+
+.secondary-whitespace-horizontal {
+  height: 15px;
+}
+
+.primary-whitespace-vertical {
+  width: 20px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 951px) {
+  .flex {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+:root {
+  /* -------------------------------- COLORS ------------------------------- */
+  --primary-black: #1c1c1c;
+  --secondary-black: #262626;
+  --white: #ffffff;
+  --red: #c20203;
+  --gold: #ceac68;
+  --gold-hover: #c29741;
+  --gold-gradient: -webkit-linear-gradient(100deg, #ceac68, #ceac68, #f0d4a4, #ceac68, #ceac68);
+  --green: #37512e;
+  --box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 40%);
+  /* --------------------------------- FONTS ------------------------------- */
+  --primary_font: "Arial";
+  --secondary_font: "Playfair Display", serif;
+}
+
+.text-padding {
+  padding: 30px;
+}
+
+.text-padding-small {
+  padding-bottom: 10px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* ------------------------------- BODY TEXT ----------------------------- */
+p,
+td,
+tr,
+h5 {
+  font-family: var(--primary_font);
+  color: var(--white);
+  font-weight: 100;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+/* ----------------------------------- H1 -------------------------------- */
+h1 {
+  font-family: var(--secondary_font);
+  color: var(--white);
+  text-align: center;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+/* ----------------------------------- H2 -------------------------------- */
+h2 {
+  font-family: var(--secondary_font);
+  font-weight: 100;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----------------------------------- H3 -------------------------------- */
+h3 {
+  font-family: var(--secondary_font);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* ----------------------------------- H4 -------------------------------- */
+h4 {
+  font-family: var(--secondary_font);
+  font-weight: 100;
+  font-size: 18px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ------------------------------------ H5 ------------------------------- */
+h5 {
+  font-size: 12px;
+}
+
+/* ------------------------------- GOLD TEXT ----------------------------- */
+.goldtext {
+  background: var(--gold-gradient);
+  background-size: 100px;
+  background-position: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* -------------------------------- A LINKS ------------------------------ */
+a {
+  font-family: var(--primary_font);
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ======================================================================= */
+/* ================================ BUTTONS ============================== */
+/* -------------------------------- STYLING ------------------------------ */
+button {
+  width: 165px;
+  height: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  border: none;
+  color: var(--white);
+  font-family: var(--primary_font);
+  font-size: 16px;
+}
+
+#primary-btn,
+#secondary-btn {
+  cursor: pointer;
+}
+
+.button-leftpart-primary,
+.leftpart-button-user {
+  border-radius: 8px 0px 0px 8px;
+  border: 2px solid var(--gold);
+  left: 0;
+  width: 130px;
+  background-color: var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.leftpart-button-user {
+  width: 85px;
+}
+
+.button-rightpart-primary,
+.rightpart-button-user {
+  border-radius: 0px 8px 8px 0px;
+  border: 2px solid var(--gold);
+  right: 0;
+  width: 30px;
+  background-color: var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.button-leftpart-secondary {
+  border-radius: 8px 0px 0px 8px;
+  left: 0;
+  width: 130px;
+  border: 2px solid var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.button-rightpart-secondary {
+  border: 2px solid var(--gold);
+  border-radius: 0px 8px 8px 0px;
+  right: 0;
+  width: 30px;
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.back-btn-profile,
+.back-btn,
+.user-btn {
+  width: 120px !important;
+}
+
+@media screen and (min-width: 951px) {
+  .back-btn-profile {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
+.leftpart-button-back {
+  background-color: transparent;
+  border: 2px solid var(--gold);
+  border-radius: 8px 0px 0px 8px;
+  left: 0;
+  width: 30px;
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.rightpart-button-back {
+  border-radius: 0px 8px 8px 0px;
+  right: 0;
+  width: 85px;
+  background-color: none;
+  border: 2px solid var(--gold);
+  height: 26px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+/* --------------------------------- HOVER ------------------------------- */
+.primary-btn:hover > .button-rightpart-primary,
+.primary-btn:hover > .button-leftpart-primary,
+.primary-btn:hover > .rightpart-button-user,
+.primary-btn:hover > .leftpart-button-user {
+  background-color: var(--gold-hover);
+  border: 2px solid var(--gold-hover);
+  cursor: pointer;
+}
+
+.secondary-btn:hover > .button-rightpart-secondary,
+.secondary-btn:hover > .button-leftpart-secondary,
+.secondary-btn:hover > .rightpart-button-back,
+.secondary-btn:hover > .leftpart-button-back {
+  background-color: var(--gold);
+  border: 2px solid var(--gold);
+  cursor: pointer;
+}
+
+/* -------------------------------- ALIGNMENT ---------------------------- */
+.btn-center,
+.hero-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 951px) {
+  .hero-btn {
+    justify-content: left;
+  }
+}
+.btn-center-margin {
+  margin: 0 auto;
+}
+
+/* ------------------------------ USER SECTION BTN ----------------------- */
+.user_section-btn_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+/* ======================================================================= */
+/* =============================== LOGO ================================== */
+.logo {
+  margin: 5px;
+  width: 40px;
+  z-index: 3;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .logo {
+    width: 40px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .logo {
+    width: 50px;
+  }
+}
+/* ======================================================================= */
+/* ================================ HEADER =============================== */
+header {
+  background-color: var(--primary-black);
+  height: 10vh;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 951px) {
+  header {
+    flex-direction: row;
+    height: 12vh;
+  }
+}
+nav {
+  background-color: var(--primary-black);
+  position: absolute;
+  top: 9vh;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+@media screen and (min-width: 951px) {
+  nav {
+    width: 1000px;
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+.flag {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.flags-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.en-flag {
+  background-image: url(../img/engelsk.png);
+}
+
+.dk-flag {
+  background-image: url(../img/dansk.png);
+}
+
+/* ---------------------------- DROPDOWN MENU ---------------------------- */
+menu {
+  cursor: pointer;
+}
+
+#menu {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #menu {
+    height: 45px;
+    width: 45px;
+  }
+}
+@media screen and (min-width: 951px) {
+  #menu {
+    display: none;
+  }
+}
+.change {
+  display: block !important;
+}
+
+.change .bar {
+  background-color: var(--white);
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--white);
+  display: block;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .bar {
+    height: 5px;
+  }
+}
+#bar1 {
+  transform: translateY(-4px);
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotate(-45deg);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .change #bar1 {
+    transform: translateY(6px) rotate(-45deg) !important;
+  }
+}
+.change #bar2 {
+  opacity: 0;
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  #bar3 {
+    transform: translateY(4px);
+  }
+}
+.change #bar3 {
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.navigation_link {
+  list-style: none;
+  color: var(--white);
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navigation_link a.active {
+  color: var(--red);
+}
+
+@media screen and (min-width: 951px) {
+  .navigation_link {
+    padding: 0;
+  }
+}
+.active {
+  color: var(--red);
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list a:hover {
+    color: var(--red);
+  }
+}
+@media screen and (min-width: 951px) {
+  .fast-links a:hover {
+    color: var(--red);
+  }
+}
+.nav_list li {
+  padding: 12px 12px 4px 12px;
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list li {
+    padding: 12px 4px 4px 4px;
+  }
+}
+.nav_list {
+  padding: 0;
+  margin: 0 15px 20px;
+  transition: 0.3s ease;
+  display: none;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 951px) {
+  .nav_list {
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+}
+/* ======================================================================= */
+/* =============================== FOOTER ================================ */
+footer {
+  margin-top: 20px;
+}
+
+.icons,
+.icons-opening {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .icons {
+    justify-content: left;
+  }
+}
+@media screen and (min-width: 951px) {
+  .icons {
+    justify-content: left;
+  }
+}
+.icon {
+  font-size: 20px;
+  color: var(--gold);
+}
+
+.fb-icon {
+  width: 110px;
+}
+
+.footer-text {
+  color: var(--white);
+  font-family: var(--primary_font);
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .footer-text {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 951px) {
+  .footer-text {
+    text-align: left;
+  }
+}
+.opening-hours-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.opening-hours-text-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.opening-hours-text th {
+  color: var(--white);
+  font-family: var(--primary_font);
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.left-alignment {
+  text-align: left;
+}
+
+.logo-footer {
+  margin: auto;
+  width: 40px;
+}
+
+.copyright {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  font-family: var(--secondary_font);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: "language-flags" "contact" "adress" "facebook" "opening-hours" "footer-logo";
+  height: 550px;
+  margin: auto;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px 30px;
+    grid-template-areas: "adress opening-hours fast-links" "contact opening-hours fast-links" "facebook footer-logo language-flags";
+    height: 275px;
+    max-width: 80%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px 30px;
+    grid-template-areas: "adress opening-hours fast-links" "contact opening-hours fast-links" "facebook footer-logo language-flags";
+    height: 275px;
+  }
+}
+.language-flags {
+  grid-area: language-flags;
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .language-flags {
+    align-self: center;
+    justify-self: right;
+  }
+}
+@media screen and (min-width: 951px) {
+  .language-flags {
+    align-self: center;
+    justify-self: right;
+  }
+}
+.contact {
+  grid-area: contact;
+  align-self: center;
+  justify-self: center;
+}
+
+.adress {
+  grid-area: adress;
+  align-self: center;
+  justify-self: center;
+}
+
+.facebook {
+  grid-area: facebook;
+  align-self: center;
+  justify-self: center;
+}
+
+.opening-hours {
+  grid-area: opening-hours;
+  align-self: center;
+  justify-self: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .adress,
+.contact {
+    margin: 0;
+    text-align: left;
+    justify-self: left;
+    align-self: flex-start;
+  }
+  .facebook {
+    margin: 0;
+    text-align: left;
+    justify-self: left;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 951px) {
+  .adress,
+.contact {
+    margin: 0;
+    text-align: left;
+    justify-self: left;
+    align-self: flex-start;
+    align-self: flex-start;
+  }
+  .facebook {
+    margin: 0;
+    text-align: left;
+    justify-self: left;
+    align-self: center;
+  }
+}
+.fast-links {
+  display: none;
+  text-align: right;
+  margin: auto;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .fast-links {
+    grid-area: fast-links;
+    display: block;
+    justify-self: right;
+    margin: 0;
+    align-self: flex-start;
+  }
+}
+@media screen and (min-width: 951px) {
+  .fast-links {
+    grid-area: fast-links;
+    display: block;
+    align-self: center;
+    justify-self: right;
+    margin: 0;
+    align-self: flex-start;
+  }
+}
+.fast-links a {
+  font-size: 14px;
+  align-self: center;
+  justify-self: center;
+}
+
+.footer-logo {
+  grid-area: footer-logo;
+  align-self: center;
+  justify-self: center;
+}
+
+.data-footer {
+  text-align: center;
+  font-size: 11px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .data-footer {
+    display: none;
+  }
+}
+@media screen and (min-width: 951px) {
+  .data-footer {
+    display: none;
+  }
+}
+.language-flags-footer {
+  padding: 4px;
+}
+
+/* ======================================================================= */
+/* ================================= FORM ================================ */
+.user_form {
+  padding: 40px;
+}
+
+/* ======================================================================= */
+/* ============================= INDEX PAGE ============================== */
+/* ------------------------------- BIG HERO ------------------------------ */
+.hero {
+  width: 100%;
+  height: 675px;
+}
+
+.hero-text {
+  position: relative;
+  top: 25%;
+  text-align: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero-text {
+    top: 45%;
+    left: 35%;
+    transform: translate(-50%, -45%);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero-text {
+    top: 45%;
+    left: 35%;
+    transform: translate(-50%, -45%);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.hero-h1 {
+  width: 89%;
+  margin: auto;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero-h1 {
+    width: 98%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero-h1 {
+    width: 100%;
+  }
+}
+.hero_left {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  height: 675px;
+  opacity: 40%;
+  background-image: url(../img/anton_profil.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  background-blend-mode: luminosity;
+  -webkit-clip-path: polygon(0 56%, 100% 70%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 56%, 100% 70%, 100% 100%, 0% 100%);
+  background-position: 0px 350px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero_left {
+    width: 50%;
+    -webkit-clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
+    background-size: cover;
+    background-position: right;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero_left {
+    width: 50%;
+    -webkit-clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
+    clip-path: polygon(60% 0, 100% 0, 100% 101%, 10% 100%);
+    background-size: cover;
+    background-position: right;
+  }
+}
+.hero_right {
+  position: absolute;
+  width: 100%;
+  height: 675px;
+  opacity: 40%;
+  filter: blur(1px);
+  background-image: url(../img/macrohair_female.webp);
+  background-size: cover;
+  background-color: var(--white);
+  background-blend-mode: luminosity;
+  -webkit-clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
+  clip-path: polygon(0 0%, 129% 0%, 100% 67%, 0 53%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero_right {
+    -webkit-clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
+    clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero_right {
+    -webkit-clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
+    clip-path: polygon(0% 0, 78% 0, 37.5% 160%, 0% 100%);
+  }
+}
+/* ---------------------------- SALON SECTION ---------------------------- */
+.salon-img {
+  opacity: 50%;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .salon-img {
+    width: 30%;
+    margin: 10px auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 951px) {
+  .salon-img {
+    width: 30%;
+    margin: auto;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+.salon-text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .salon-text {
+    width: 45%;
+    text-align: left;
+    margin: 10px auto;
+  }
+}
+@media screen and (min-width: 951px) {
+  .salon-text {
+    width: 30%;
+    text-align: left;
+    margin: 10px auto;
+  }
+}
+/* ------------------------ OPENING HOURS SECTION ------------------------ */
+.opening-hours-section,
+.about-cover-section {
+  width: 100%;
+  height: 400px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .opening-hours-section,
+.about-cover-section {
+    height: 350px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .opening-hours-section,
+.about-cover-section {
+    height: 350px;
+  }
+}
+.opening-hours-section::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  filter: grayscale(100%);
+  opacity: 10%;
+  background-position: -323px;
+  background-size: 270%;
+  background-repeat: no-repeat;
+  background-image: url(../img/opening-hours-background-img.webp);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .opening-hours-section::before {
+    background-size: cover;
+    background-position: center;
+    opacity: 10%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .opening-hours-section-left::before {
+    -webkit-clip-path: polygon(32% 0, 100% 0, 100% 100%, 51% 100%);
+    clip-path: polygon(32% 0, 100% 0, 100% 100%, 51% 100%);
+    background-position: -280px;
+    background-size: 130%;
+    opacity: 30%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .opening-hours-section-right::before {
+    -webkit-clip-path: polygon(0% 0, 30% 0, 60% 161%, 0% 100%);
+    clip-path: polygon(0% 0, 30% 0, 60% 161%, 0% 100%);
+    background-position: -280px;
+    background-size: 130%;
+    opacity: 30%;
+  }
+}
+.opening-hours-section-inside {
+  position: relative;
+  text-align: center;
+}
+
+.opening-hours-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 30px 30px;
+  grid-auto-flow: row;
+  grid-template-areas: "monday tuesday" "wednesday thursday" "friday saturday" "sunday sunday";
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .opening-hours-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    grid-template-areas: "monday tuesday wednesday thursday friday saturday sunday";
+  }
+}
+@media screen and (min-width: 951px) {
+  .opening-hours-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr;
+    gap: 30px 48px;
+    grid-template-areas: "monday tuesday wednesday thursday friday saturday sunday";
+  }
+}
+.monday {
+  grid-area: monday;
+}
+
+.tuesday {
+  grid-area: tuesday;
+}
+
+.wednesday {
+  grid-area: wednesday;
+}
+
+.thursday {
+  grid-area: thursday;
+}
+
+.friday {
+  grid-area: friday;
+}
+
+.saturday {
+  grid-area: saturday;
+}
+
+.sunday {
+  grid-area: sunday;
+}
+
+.opening-hours-days {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .opening-hours-days {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .opening-hours-days {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+}
+/* --------------------------- CTA BTN SECTION --------------------------- */
+.cta-section {
+  height: 250px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cta-section-facebook::before {
+  background-image: url(../img/macrohair_female.webp);
+  filter: grayscale(60%);
+}
+
+.cta-section-seeProducts::before {
+  background-image: url(../img/products.webp);
+}
+
+.cta-section-offer::before {
+  background-image: url(../img/scissor.webp);
+  filter: grayscale(90%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .cta-section {
+    height: 250px;
+    width: 190px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .cta-section {
+    height: 250px;
+    width: 100%;
+    margin: 0 20px 40px 20px;
+  }
+}
+.cta-section a {
+  width: 100%;
+}
+
+.cta-section-btn {
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(28, 28, 28, 0.7294117647);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+@media screen and (min-width: 951px) {
+  .cta-section-btn {
+    height: 60px;
+  }
+}
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .cta-flex {
+    gap: 10px;
+  }
+}
+/* ======================================================================= */
+/* ===================== USER SECTION / USER PAGES ======================= */
+.user_section {
+  width: 100%;
+  padding: 20px;
+  margin: 0px auto;
+  text-align: center;
+  background-color: var(--secondary-black);
+  box-shadow: var(--box-shadow);
+  --webkit-box-shadow: var(--box-shadow);
+  position: relative;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .user_section {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .user_section {
+    width: 700px;
+  }
+}
+.user_section-input {
+  background-color: transparent;
+  padding: 6px;
+  -o-border-image: var(--gold-gradient) 1;
+  border-image: var(--gold-gradient) 1;
+  border-width: 2px;
+  border-style: solid;
+  color: var(--white);
+  font-family: var(--primary_font);
+  font-size: 16px;
+}
+
+.user_profile_flex {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 951px) {
+  .user_profile_flex {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 951px) {
+  .user_profile_flex-item {
+    width: 350px;
+  }
+}
+.user_profile-flex-gap {
+  display: block;
+  height: 30px;
+}
+
+@media screen and (min-width: 951px) {
+  .user_profile-flex-gap {
+    display: none;
+  }
+}
+/* ======================================================================= */
+/* =========================== BOOKING PAGE ============================== */
+.booking-form {
+  color: var(--gold);
+  background-color: var(--secondary-black);
+  border: none;
+  padding: 15px 10px 5px 10px;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  --webkit-box-shadow: var(--box-shadow);
+}
+
+.booking-flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  height: 30px;
+  align-items: center;
+  padding: 0 5px 0 40px; /* OLD - iOS 6-, Safari 3.1-6, BB7 */ /* TWEENER - IE 10 */
+  display: -webkit-flex;
+}
+
+.booking-flex p {
+  font-size: 14px;
+}
+
+.book-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.seeMoreBox-flex {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.seeMoreBox {
+  display: none;
+  background-color: var(--secondary-black);
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.4);
+  --webkit-box-shadow: 0px 3px 3px 0px rgb(0 0 0 / 40%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .seeMoreBox {
+    padding: 0 30px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .seeMoreBox {
+    padding: 0 50px;
+  }
+}
+.booking-type {
+  display: block;
+  width: 50%;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .booking-type {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .booking-type {
+    width: 44%;
+  }
+}
+.booking-time {
+  display: block;
+  width: 25%;
+  text-align: right;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .booking-time {
+    width: 20%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .booking-time {
+    width: 12%;
+  }
+}
+.booking-price {
+  display: block;
+  width: 25%;
+  text-align: right;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .booking-price {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .booking-price {
+    width: 44%;
+  }
+}
+.booking-treatment-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.open-close-arrow {
+  padding: 5px;
+  font-size: 30px;
+  display: block !important;
+  transition: 0.2s;
+}
+
+.flex-center {
+  justify-content: center;
+}
+
+/* --------------------------- STYLE CHECKBOX ---------------------------- */
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--white);
+  margin: 0;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  border: 1px solid var(--primary-black);
+  cursor: pointer;
+  position: absolute;
+  margin: 5px 0 0 5px;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  width: 17px;
+  height: 17px;
+}
+
+input[type=checkbox]:checked::before {
+  transform: scale(1);
+  background-color: var(--primary-black);
+  border-radius: 100%;
+}
+
+/* ---------------- CHANGE BACKGROUND COLOR WHEN CHECKED ----------------- */
+.booking-checkbox:checked {
+  background-color: var(--primary-black);
+}
+
+.booking-checkbox:checked + .booking-flex {
+  background-color: var(--gold);
+}
+
+/* ======================================================================= */
+/* ================================= CALENDAR ============================ */
+.content {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.calendar {
+  display: flex;
+  flex-flow: column;
+  background-color: var(--secondary-black);
+  box-shadow: var(--box-shadow);
+  --webkit-box-shadow: var(--box-shadow);
+}
+
+.calendar .calendar-header .month-year {
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .calendar .calendar-header .month-year {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .calendar .calendar-header .month-year {
+    font-size: 25px;
+  }
+}
+.calendar .days {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.calendar .days .day_name {
+  width: 14.2857142857%;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--secondary_font);
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .calendar .days .day_name {
+    font-size: 19px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .calendar .days .day_name {
+    font-size: 19px;
+  }
+}
+.calendar .days .day_name:nth-child(7) {
+  border: none;
+}
+
+.calendar .days .day_num {
+  display: flex;
+  flex-flow: column;
+  width: 14.2857142857%;
+  border: 2px solid transparent;
+  padding: 15px;
+  color: var(--white);
+  cursor: pointer;
+  min-height: 45px;
+  font-family: var(--primary_font);
+  align-items: center;
+  font-size: 14px;
+}
+
+.calendar .days .day_num span {
+  display: inline-flex;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .calendar .days .day_num span {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .calendar .days .day_num span {
+    font-size: 16px;
+  }
+}
+.calendar .days .day_num:hover {
+  border: 2px solid transparent;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .calendar .days .day_num:hover {
+    border: 2px solid var(--primary-black);
+  }
+}
+@media screen and (min-width: 951px) {
+  .calendar .days .day_num:hover {
+    border: 2px solid var(--primary-black);
+  }
+}
+.calendar .days .day_num.ignore {
+  background-color: #2e2e2e;
+  color: #4e4e4e;
+  cursor: default;
+  font-family: var(--primary_font);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .calendar .days .day_num.ignore {
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .calendar .days .day_num.ignore {
+    font-size: 16px;
+  }
+}
+.calendar .days .day_num.ignore:hover {
+  border: 2px solid transparent;
+}
+
+.calendar .days .day_num.selected {
+  background-color: var(--green);
+  cursor: pointer;
+}
+
+.prev-next-month-arrow {
+  padding: 20px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.prev-next-month-arrow-right {
+  right: 0;
+}
+
+.avalible-hours {
+  background-color: var(--secondary-black);
+  margin-top: 20px;
+  box-shadow: var(--box-shadow);
+  --webkit-box-shadow: var(--box-shadow);
+  height: 170px;
+  padding: 20px 0;
+}
+
+.calendar-arrows {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 50px;
+}
+
+.todays-date {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* ======================================================================= */
+/* =========================== BOOKING CONFIRMATION ====================== */
+.conf-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.conf-table table td {
+  display: flex;
+  flex-direction: row;
+}
+
+.attention-information {
+  font-size: 10px;
+  text-align: center;
+  position: absolute;
+  bottom: 8px;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  line-height: 15px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .attention-information {
+    font-size: 11px;
+    width: 60%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .attention-information {
+    font-size: 11px;
+    width: 45%;
+  }
+}
+/* ======================================================================= */
+/* ============================ PRICING PAGE ============================= */
+.price-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px 0px;
+  grid-template-areas: "haircut" "brows" "permanent" "other-treatments" "haircolor";
+  width: 100%;
+  height: 1680px;
+}
+
+@media screen and (min-width: 951px) {
+  .price-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 30px 30px;
+    grid-template-areas: "haircut brows" "permanent other-treatments" "haircolor haircolor";
+    height: 940px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+.haircut {
+  grid-area: haircut;
+}
+
+.brows {
+  grid-area: brows;
+}
+
+.permanent {
+  grid-area: permanent;
+}
+
+.other-treatments {
+  grid-area: other-treatments;
+}
+
+.haircolor {
+  grid-area: haircolor;
+}
+
+.price-grid-item {
+  background-color: var(--secondary-black);
+  padding: 10px;
+  height: 290px;
+  box-shadow: var(--box-shadow);
+  --webkit-box-shadow: var(--box-shadow);
+}
+
+@media screen and (min-width: 951px) {
+  .price-grid-item {
+    padding: 20px;
+  }
+}
+.price-grid-item table td {
+  display: flex;
+  flex-direction: row;
+}
+
+.price-table {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.prices td {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.prices {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.tableRowFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-header {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-header-icon {
+  width: 30px;
+}
+
+/* ------------------------ HAIR COLOR PRICE SECTION --------------------- */
+.price-table_color {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media screen and (min-width: 951px) {
+  .price-table_color {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+  }
+}
+.price-table_color-column {
+  flex-direction: column;
+}
+
+@media screen and (min-width: 951px) {
+  .price-table_color-column {
+    flex-direction: row;
+  }
+}
+.price-table-gap_color {
+  display: none;
+}
+
+@media screen and (min-width: 951px) {
+  .price-table-gap_color {
+    display: block;
+    width: 60px;
+  }
+}
+.price-grid-item_haircolor {
+  height: 440px;
+}
+
+@media screen and (min-width: 951px) {
+  .price-grid-item_haircolor {
+    height: 290px;
+  }
+}
+/* ======================================================================= */
+/* ============================ ABOUT PAGE =============================== */
+.about-section-flex {
+  display: flex;
+  flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .about-section-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .about-section-flex {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 100px;
+  }
+}
+.about-anton-img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: 0px -50px;
+  object-position: 0px -50px;
+  opacity: 60%;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .about-anton-img {
+    width: 30%;
+    height: 100%;
+    -o-object-position: center;
+    object-position: center;
+  }
+}
+@media screen and (min-width: 951px) {
+  .about-anton-img {
+    width: 30%;
+    height: 290px;
+  }
+}
+.about-heading {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .about-heading {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 951px) {
+  .about-heading {
+    text-align: left;
+  }
+}
+.about-text {
+  width: 100%;
+  margin: 20px auto;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .about-text {
+    width: 50%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 951px) {
+  .about-text {
+    width: 30%;
+    margin: 0;
+  }
+}
+.about-cover-text {
+  width: 90%;
+  margin: auto;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .about-cover-text {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .about-cover-text {
+    width: 60%;
+  }
+}
+.about-cover-section::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 10%;
+  background-repeat: no-repeat;
+  background-image: url(../img/salon-floor-anton-tzannis.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .about-cover-section::before {
+    background-size: cover;
+    background-position: center;
+    opacity: 10%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .about-cover-section::before {
+    opacity: 20%;
+  }
+}
+/* ======================================================================= */
+/* ============================ CONTACT PAGE ============================= */
+.hero-contact {
+  width: 100%;
+  height: 100vh;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero-contact {
+    height: 675px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero-contact {
+    height: 675px;
+  }
+}
+.hero-text-contact-section {
+  position: relative;
+  top: 55%;
+  text-align: center;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero-text-contact-section {
+    top: 22%;
+    left: 15%;
+    transform: translate(-50%, -45%);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero-text-contact-section {
+    top: 10%;
+    left: 7%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+.hero-text-contact {
+  font-size: 16px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero-text-contact {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero-text-contact {
+    font-size: 18px;
+  }
+}
+.hero_left-contact {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  height: 675px;
+  opacity: 50%;
+  background-color: var(--primary-black);
+  -webkit-clip-path: polygon(0 0%, 130% 0%, 100% 69%, 0 52%);
+  clip-path: polygon(0 0%, 130% 0%, 100% 69%, 0 52%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero_left-contact {
+    width: 71%;
+    -webkit-clip-path: polygon(38% 0, 100% 0, 100% 100%, 2% 100%);
+    clip-path: polygon(38% 0, 100% 0, 100% 100%, 2% 100%);
+    background-size: cover;
+    background-position: right;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero_left-contact {
+    width: 75%;
+    -webkit-clip-path: polygon(42% 0, 100% 0, 100% 101%, 11% 100%);
+    clip-path: polygon(42% 0, 100% 0, 100% 101%, 11% 100%);
+    background-size: cover;
+    background-position: right;
+  }
+}
+.hero_right-contact {
+  position: absolute;
+  width: 100%;
+  height: 735px;
+  opacity: 70%;
+  filter: blur(1px);
+  background-image: url(../img/contact-cover-img.webp);
+  background-size: cover;
+  background-position: -330px 300px;
+  background-repeat: no-repeat;
+  background-color: var(--white);
+  background-blend-mode: luminosity;
+  -webkit-clip-path: polygon(0 51%, 100% 67%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 51%, 100% 67%, 100% 100%, 0% 100%);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .hero_right-contact {
+    -webkit-clip-path: polygon(0% 0, 53% 0, 13% 158%, 0% 100%);
+    clip-path: polygon(0% 0, 53% 0, 13% 158%, 0% 100%);
+    background-position: -500px -60px;
+    background-size: auto;
+    height: 675px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .hero_right-contact {
+    -webkit-clip-path: polygon(0% 0, 55% 0, 20% 149%, 0% 100%);
+    clip-path: polygon(0% 0, 55% 0, 20% 149%, 0% 100%);
+    background-position: -500px -60px;
+    background-size: auto;
+    height: 675px;
+  }
+}
+.adress-map {
+  width: 100% !important;
+  height: 100%;
+}
+
+.contact-logo {
+  width: 90px;
+  margin-top: 10px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .contact-logo {
+    width: 100px;
+    position: absolute;
+    top: 430px;
+    left: 7%;
+  }
+}
+@media screen and (min-width: 951px) {
+  .contact-logo {
+    width: 120px;
+    position: absolute;
+    top: 430px;
+    left: 7%;
+  }
+}
+.icon-contact {
+  font-size: 30px;
+  color: var(--gold);
+}
+
+.icons-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .icons-contact {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-width: 951px) {
+  .icons-contact {
+    margin-bottom: 10px;
+  }
+}
+/* ======================================================================= */
+/* ========================== PRODUCTS PAGE ============================== */
+.product-americancrew::before {
+  background-image: url(../img/americancrew.webp);
+}
+
+.product-nineyards::before {
+  background-image: url(../img/anton-tzannis.jpg);
+}
+
+.product-eksperience::before {
+  background-image: url(../img/eksperience.webp);
+}
+
+.product-stylemasters::before {
+  background-image: url(../img/stylemasters.webp);
+}
+
+@media screen and (min-width: 672px) and (max-width: 950px) {
+  .cta-section-products {
+    height: 250px;
+    width: 280px;
+  }
+}
+#americancrew-info,
+#nineyards-info,
+#eksperience-info,
+#stylemasters-info,
+#cta-facebook-info,
+#cta-products-info,
+#cta-offer-info {
+  display: none;
+  padding: 10px;
+}
+
+#americancrew-info-btn,
+#nineyards-info-btn,
+#eksperience-info-btn,
+#stylemasters-info-btn,
+#cta-facebook-info-btn,
+#cta-products-info-btn,
+#cta-offer-info-btn {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
